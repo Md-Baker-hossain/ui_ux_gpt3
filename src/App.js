@@ -9,6 +9,7 @@ import Possibility from './comtainer/possibility/Possibility';
 import Cta from './component/cta/Cta';
 import Blog from './comtainer/blog/Blog';
 import Footer from './comtainer/footer/Footer';
+import Features from './component/feature/Features';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       </div>
       <Brand></Brand>
       <WhatGPT3></WhatGPT3>
-      <Feature></Feature>
+       <Features></Features>
       <Possibility></Possibility>
       <Cta></Cta>
       <Blog></Blog>

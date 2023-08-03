@@ -14,9 +14,9 @@ const Navbar = () => {
         </div>
         <div className="gpt3__navbar-links_container">
           <a href="#hone">Home</a>
-          <a href="#wgt3">What is GPT?</a>
+          <a href="#wgpt3">What is GPT?</a>
           <a href="#possibility">Open Ai</a>
-          <a href="#feature">Case Studies</a>
+          <a href="#features">Case Studies</a>
           <a href="#blog">Blog</a>{" "}
         </div>
       </div>
