@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import logo from "../../assert/GPT-3.svg";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -13,11 +14,11 @@ const Navbar = () => {
           <img src={logo} alt="Logo" srcset="" />
         </div>
         <div className="gpt3__navbar-links_container">
-          <a href="#hone">Home</a>
-          <a href="#wgpt3">What is GPT?</a>
-          <a href="#possibility">Open Ai</a>
-          <a href="#features">Case Studies</a>
-          <a href="#blog">Blog</a>{" "}
+          <Link to="/">Home</Link>
+          <Link to="/wgpt">What is GPT?</Link>
+          <Link to="/possibility">Open Ai</Link>
+          <Link to="/feature">Case Studies</Link>
+          <Link to="/blog">Blog</Link>
         </div>
       </div>
       <div className="gpt3__navbr-sing">
@@ -41,11 +42,11 @@ const Navbar = () => {
         {toggleMenu && (
           <div className="gpt3__navbar-menu_container scale-up-center">
             <div className="gpt3__navbar-menu_container-links">
-              <a href="#hone">Home</a>
-              <a href="#wgt3">What is GPT?</a>
-
-              <a href="#feature">Case Studies</a>
-              <a href="#blog">Blog</a>
+              <Link to="/">Home</Link>
+              <Link to="/wgpt">What is GPT?</Link>
+              <Link to="/possibility">Open Ai</Link>
+              <Link to="/feature">Case Studies</Link>
+              <Link to="/blog">Blog</Link>
             </div>
             <div className="gpt3__navbar-menu_container-links-sign">
               <p>Sign in</p>
