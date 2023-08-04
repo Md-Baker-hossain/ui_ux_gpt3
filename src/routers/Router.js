@@ -6,6 +6,9 @@ import WhatGPT3 from "../comtainer/whatGPT3/WhatGPT3";
 import Possibility from "../comtainer/possibility/Possibility";
 import Features from "../component/feature/Features";
 import Blog from "../comtainer/blog/Blog";
+import Register from "../layout/Register";
+import Loging from "../layout/Loging";
+import PrivateRouter from "./PrivateRouter";
  
 
 const Router = createBrowserRouter([
@@ -31,7 +34,17 @@ const Router = createBrowserRouter([
         },
         {
             path: "/blog",
-            element: <Blog></Blog>,
+            element: <PrivateRouter>
+                <Blog></Blog>
+                </PrivateRouter>,
+        },
+        {
+            path: "/register",
+            element: <Register></Register>,
+        },
+        {
+            path: "/loging",
+            element: <Loging></Loging>,
         },
       ],
     },

@@ -22,8 +22,12 @@ const Navbar = () => {
         </div>
       </div>
       <div className="gpt3__navbr-sing">
-        <p>Sign in</p>
-        <button>sign out</button>
+        <Link to="/loging">
+          <p>Loging</p>
+        </Link>
+        <Link to="/register">
+          <button>Register</button>
+        </Link>
       </div>
       <div className="gpt3__navbar-menu">
         {toggleMenu ? (
@@ -49,8 +53,12 @@ const Navbar = () => {
               <Link to="/blog">Blog</Link>
             </div>
             <div className="gpt3__navbar-menu_container-links-sign">
-              <p>Sign in</p>
-              <button>sign out</button>
+              <Link to="/loging">
+                <p>Loging</p>
+              </Link>
+              <Link to="/register">
+                <button>Register</button>
+              </Link>
             </div>
           </div>
         )}

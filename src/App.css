@@ -1,4 +1,7 @@
+@tailwind components;
+
 * {
+
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -33,6 +36,16 @@ a {
 .section__padding {
   padding: 4rem 6rem;
 }
+.section__padding_lg {
+  padding-left: 12rem;
+  padding-right: 12rem;
+  padding-top: 12rem;
+  padding-bottom: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Change '3' to the number of columns you want */
+  grid-gap: 1rem; /* Adjust the gap between grid items */
+}
 
 .section__margin {
   margin: 4rem 6rem;
@@ -64,6 +77,18 @@ a {
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .section__padding_lg {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 12rem;
+    padding-bottom: 1rem;
+    grid:none
+  }
+    
+  }
+
+
 @media screen and (max-width: 700px) {
   .section__padding {
     padding: 4rem;
@@ -71,6 +96,14 @@ a {
 
   .section__margin {
     margin: 4rem;
+  }
+
+  .section__padding_lg {
+    padding-top: 6rem;
+    padding-right: 8rem;
+    padding-bottom: 1rem;
+    padding-left: 8rem;
+   
   }
 }
 
@@ -81,5 +114,37 @@ a {
 
   .section__margin {
     margin: 4rem 2rem;
-  }  
+  } 
+  
+  .section__padding_lg {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    /* grid:none; */
+   
+  }
 }
+
+@layer components {
+  .error {
+    @apply text-red-500 text-sm m-0;
+  }
+  .error::before {
+    content: "⚠ ";
+  }
+}
+
+
+.error-text {
+  color: red; /* Set the text color to red */
+  font-size: 18px; /* Set the font size for the error text */
+  margin: 1rem;
+   /* Remove any default margin to ensure proper alignment */
+  /* You can add more styles here as needed */
+}
+
+
+  
+
+
+ 
